@@ -1,0 +1,15 @@
+{
+  "name": "dashboard_meteorologico",
+  "version": "1.0.0",
+  "description": "Dashboard de clima. Onde sera consumido uma API de clima",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fabio Amorim",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  }
+}
