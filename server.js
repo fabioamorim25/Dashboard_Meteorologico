@@ -5,9 +5,6 @@ const path= require('path');
 const router = require('./src/router/router');
 
 
-
-
-
 //Definir onde esta os arquivos do sistema
 app.use(express.static(path.join(__dirname,'public')));
 app.set('views engine', 'ejs'); 
@@ -16,12 +13,6 @@ app.set('views engine', 'ejs');
 
 
 app.use('/', router);
-
-
-
-
-
-
 
 
 
