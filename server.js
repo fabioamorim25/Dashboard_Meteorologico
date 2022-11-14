@@ -5,6 +5,9 @@ const path= require('path');
 const router = require('./src/router/router');
 
 
+
+
+
 //Definir onde esta os arquivos do sistema
 app.use(express.static(path.join(__dirname,'public')));
 app.set('views engine', 'ejs'); 
@@ -19,6 +22,6 @@ app.use('/', router);
 
 
 
-app.listen(process.env.PORT||3000,()=>{
+app.listen(process.env.PORT,()=>{
     console.log("Servidor rodando na porta: ", process.env.PORT);
 })

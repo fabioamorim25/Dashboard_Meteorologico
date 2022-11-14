@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CDN do axios no front end. Para fazer a requisição para o back end do sistema -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Pagina inicial</title>
+</head>
+<body>
+    
+   
+    <form action="">
+        <input type="text" placeholder="Nome da cidade" name="nameCity" id="city">
+        <button>Enviar</button>
+    </form>
+   
+    <button onclick="getLocation()">Localização automatica</button>
+
+   
+   
+   <script>
+    
+       //FUNCIONALIDADE: PEGAR A LATITUDE E LONGITUDE DO USUÁRIO
+       function getLocation(){
+        if (navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(showPosition);
+        }
+        else{
+            alert("O seu navegador não suporta Geolocalização. Por favor digite o nome da sua cidade");
+        }    
+      
+        async function showPosition(position){
+
+           //enviar os dados de latitude e longitude para o back end
+           const enviar = await axios.post('http://localhost:3000/api', { Lat:position.coords.latitude, Lon:position.coords.longitude })
+           .then(response =>{
+            console.log(response.data)
+            }).catch(error=>{
+                console.error(error);
+            })        
+        }
+       } 
+   </script>
+</body>
+</html>
