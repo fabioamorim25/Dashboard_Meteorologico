@@ -1,6 +1,7 @@
 const axios = require('axios');
 
 
+
 const homePage = async(req,res)=>{
     try { 
         res.render('home.ejs');
@@ -11,9 +12,17 @@ const homePage = async(req,res)=>{
 
 const consumirApi = async (req,res)=>{
 
+    //Variavel que recebe os dados de latitude e longitude vinda do front end
+    const doc = {
+        lon: req.body.lon,
+        lat: req.body.lat
+    }
 
 
-    res.send("tudo ok")
+     
+
+
+        res.send(doc)
 
 }
 
