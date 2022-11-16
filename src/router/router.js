@@ -8,8 +8,9 @@ const bodyParser= require('body-parser')
 
 router.get('/',controller.homePage);
 
-router.post('/api',bodyParser.json(), controller.consumirApi);
-
+router.post('/api',express.json(),express.urlencoded({extended:true}), controller.consumirApi);
+//[express.urlencoded({extended:true})] usado para pegar os dados do input quando tiver
+//[express.json()] usado para pegar os dados de latitude e longitude
 
 
 

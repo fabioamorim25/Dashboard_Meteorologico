@@ -18,11 +18,27 @@ const consumirApi = async (req,res)=>{
         lat: req.body.lat
     }
 
+    const city = req.body.nameCity;
+
+
+    //CONSUMIR A API APARTIR DOS DADOS RECEBIDOS DO [DOC]
+   // var {data} = await axios(`https://api.openweathermap.org/data/2.5/weather?q=${city.nameCity}&appid=${process.env.API_KEY}&lang=pt_br&units=metric`);
+    
+   res.status(200).send({city,doc})
+    // try {
+
+    //     var {data} = await axios(`https://api.openweathermap.org/data/2.5/weather?lat=${doc.lat}&lon=${doc.lon}&appid=${process.env.API_KEY}&lang=pt_br&units=metric`);
+          
+    //     res.json(data);
+
+    // } catch (error) {
+    //     console.error(error)
+    // }
 
      
 
 
-        res.send(doc)
+       
 
 }
 

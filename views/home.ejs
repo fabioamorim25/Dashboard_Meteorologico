@@ -11,7 +11,7 @@
 <body>
 
 
-    <form action="">
+    <form action="/api" method="post">
         <input type="text" placeholder="Nome da cidade" name="nameCity" id="city">
         <button>Enviar</button>
     </form>
@@ -30,15 +30,12 @@
             else {
                 alert("O seu navegador não suporta Geolocalização. Por favor digite o nome da sua cidade");
             }
-
             async function showPosition(position) {
-
                 //Criar um objeto com os dados de latitude e longitude gerados 
                 const doc = { 
                     lat: position.coords.latitude,
                     lon: position.coords.longitude
                 }
-
                 //Enviar os dados de latitude e longitude para o back end
                 const enviar = await axios.post('http://localhost:3000/api',doc)
                     .then(response => {
