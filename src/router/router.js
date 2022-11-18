@@ -14,6 +14,7 @@ router.post('/api',express.json(),express.urlencoded({extended:true}), controlle
 
 
 
+router.get('/all',controller.all);
 
 
 
