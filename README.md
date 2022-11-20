@@ -1,6 +1,6 @@
 # Dashboard_Meteorologico
 
-<h4 align = "center"style="background-color:red; color:black">
+<h4 align = "center">
 <hr>
  👷‍♂️Projeto 🚧 Dashboard_Meteorologico em contrução 🚧 ...
 <hr>
@@ -25,8 +25,9 @@
     <a href ="#desafios">Desafios</a> -
     <a href ="#features">Features</a> -
     <a href ="#ilustração">Ilustração</a> - 
+    <a href ="#design_figma">figma</a> - 
     <a href ="#pré-requisitos">Pré-requisitos</a> -
-    <a href ="#🛠️tecnologias_framework">Tecnologias/framework</a> -
+    <a href ="#tecnologias_framework">Tecnologias/framework</a> -
     <a href ="#autor">Autor</a>
   </p>
 <hr>
@@ -35,7 +36,7 @@
 
 ### Features 
 
-- [ ] 
+- [x] Layout no figma 
 - [ ] 
 - [ ] 
 - [ ] 
@@ -49,6 +50,11 @@
   <img title="tela inicial do sistema" src ="./github/TELAHOME.png"/>
   
 </h1>
+
+### 🧑‍💻 Design no figma
+Todo o layout do sistema foi projetado utilizando o figma. Aonde a partir dos dados recebidos da API openweathermap foi desenvolvido o layout.
+[Layout no Figma](https://www.figma.com/file/FGi7M9HFqEe3itzQ0qcv9L/Dashboard-Meteorologico?t=wfk1IGl0Z2rWPEWp-6)
+
 
 ### Pré-requisitos
 
